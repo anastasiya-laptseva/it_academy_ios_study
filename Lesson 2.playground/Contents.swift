@@ -57,3 +57,41 @@ var newLine = "\n"
 var string2 = "string"
 
 string+newLine+string2
+
+var newLine2 = "asda"
+var newLine3 = "asdas"
+
+//Задания с репозитория преподавателя:
+
+let myNewConst: Int = 2
+myNewConst
+
+var myNewVariable: Int = 3
+myNewVariable
+
+var sumOfValues: Int = myNewConst + myNewVariable
+sumOfValues
+
+sumOfValues = myNewConst * myNewVariable
+sumOfValues
+
+var myDouble: Double = 10
+myDouble
+
+var myBoolean: Bool = myNewVariable >= myNewConst
+var myBoolean1: Bool = myNewVariable == myNewConst
+var myBoolean2: Bool = myNewVariable != myNewConst
+var myBoolean3: Bool = myNewVariable <= myNewConst
+myBoolean
+myBoolean1
+myBoolean2
+myBoolean3
+
+var myString: String = "Task completed"
+myString
+
+//Я догадываюсь о том, что после объявления переменной либо постоянной не обязательно писать ее в следующей строке, чтобы проверить результат. Это же не обязательно, правильно?
+
+//В случае проведения математических операций с переменными для результата этих операций мы заводим новую переменную, которой присваевается этот результат. А зачем проводить математическую операцию без объявления переменной. Пример:
+// vaiable + 1
+//Просто чтобы посмотреть рзультат здесь и сейчас, который ничему не будет присвоен и мы не сможем его никак использовать?
