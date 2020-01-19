@@ -49,7 +49,9 @@ let constantBoolean = (firstItem == secondItem) ? true : false
 let constantInt = (firstItem != secondItem) ? 10 : 20
 //let constantInt2 = (firstItem == secondItem) ? print("") : print("")
 
+
 // switch
+
 
 var booleanVarForSwitch = firstItem == secondItem
 
@@ -143,16 +145,17 @@ class CustomClass {
 }
 let myClassInstanse = CustomClass()
 class Vehicle {
-    let canMove = true
+    var canMove = true
 }
 
 class Car: Vehicle, GenericProtocol {
-    var genericProperty: Int?
+    var genericProperty: Int
     
     var color: Int
     var trunk: String?
     init (inputColor: Int) {
-        color = inputColor ??
+        genericProperty = 0
+        color = inputColor
     }
 }
 let myCar = Car(inputColor: 999999)
@@ -161,9 +164,106 @@ myCar.trunk
 myCar.canMove
 //print(myCar is Car)
 myCar.genericProperty = 1000000
-let yourCar = myCar
-yourCar.genericProperty
+var yourCar = myCar
+yourCar.genericProperty = 99
 yourCar = Car(inputColor: 123)
 yourCar.genericProperty = 0
 myCar.genericProperty
 yourCar.genericProperty
+myCar.color
+
+
+
+// Домашнее задание:
+
+//Примеры кода для выражений if, guard, ternary operator, switch:
+
+//1. if
+//Соревнование двух участников
+var resultParticipant1 = 10
+var resultParticipant2 = 20
+
+if resultParticipant1 > resultParticipant2 {
+    print("Winner participant number 1!")
+} else {
+    if resultParticipant1 < resultParticipant2 {
+        print("Winner participant number 2!")
+    } else {
+        print("Friendship won!")
+    }
+}
+
+//2. guard
+var resultParticipant3: Int? = 3;
+var resultParticipant4: Int? = 5;
+resultParticipant3 = nil
+
+func functionParticipant3(value: Int?) {
+    guard resultParticipant3 == resultParticipant4 else {
+        print("Not = or empty")
+        return;
+    }
+    print("resultParticipant3=resultParticipant4")
+}
+
+functionParticipant3 (value: resultParticipant3)
+
+
+//3. ternary operator
+
+var number = 0
+print(number > 0 ? "Positive": number < 0 ? "Negative": "0")
+
+//4. switch
+
+var direction = "Left"
+switch direction {
+case "Up":
+    print("direction Up")
+case "Down":
+    print("direction Down")
+case "Left":
+    print("direction Left")
+case "Right":
+    print("direction Right")
+default:
+    print("Direction not found")
+}
+
+//Практика:
+
+
+
+//1. Создать 2 константы типа Int, затем сравнить их значения и вывести в консоль результат сравнения в виде: "const1 > const2".
+
+var const1: Int = 1
+var const2: Int = 2
+if const1 > const2 {
+    print("const1 > const2")
+} else  if const1 < const2 {
+    print("const1 < const2")
+} else {
+    print("const1 == const2")
+}
+
+
+//2. Создать несколько переменных и вывести в консоль результат их сложения.
+
+var const3: Int = 2
+print(const1+const2+const3)
+
+
+//3. Составить алгоритм увеличения всех трех ранее созданных переменных на 5,если среди них есть хотя бы две равные. В противном случае выдать ответ «равных нет».
+
+if const1 == const2 || const1 == const3 || const2 == const3 {
+    print(const1 + 5, const2 + 5, const3 + 5)
+} else {
+    print("Равных нет")
+}
+
+//4. Создать Optional-переменнтую, затем проверить ее на nil: если есть значение - вывести его на экран, если нет - вывести на экран фразу "empty " Advanced: Ознакомится с исходным кодом типа Optional
+
+var optionalVariable: Int? = 1
+print(optionalVariable ?? "empty")
+optionalVariable = nil
+print(optionalVariable ?? "empty")
