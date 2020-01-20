@@ -267,3 +267,41 @@ var optionalVariable: Int? = 1
 print(optionalVariable ?? "empty")
 optionalVariable = nil
 print(optionalVariable ?? "empty")
+
+
+
+//Конспект по основным методам Int, Double
+
+//init(Double)
+//Создает целое число из заданного значения с плавающей точкой, округляя до нуля.
+
+let doubleValue = 1.0000000001
+
+var intValue = Int(doubleValue)
+
+print(intValue)
+
+//init(Float)
+//Создает целое число из заданного значения с плавающей точкой, округляя до нуля.
+
+let floatValue2 = 1.8
+
+var intValue2 = Int(floatValue2)
+
+print(intValue2)
+
+//init()
+//Создает новое значение, равное нулю.
+let intZero = Int()
+print(intZero)
+
+//func isMultiple(of: Int) -> Bool
+//Возвращает, trueесли это значение кратно данному значению, и в falseпротивном случае.
+
+var kratno = Int(2).isMultiple(of: 3)
+
+//static func random(in: Range<Int>) -> Int
+//Возвращает случайное значение в указанном диапазоне.
+
+var random = Int.random(in: 1..<100)
+print(random)
