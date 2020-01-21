@@ -305,3 +305,14 @@ var kratno = Int(2).isMultiple(of: 3)
 
 var random = Int.random(in: 1..<100)
 print(random)
+
+//пример рекурсии
+
+func Recurs(value: Int){
+    print(value)
+    if(value>0){
+        Recurs(value: value-1)
+    }
+}
+
+Recurs(value: 20)
