@@ -103,7 +103,7 @@ typealias MyCustomTupleTupe = (integer: Int,double: Double,mystring: String)
 
 var customTuple: MyCustomTupleTupe
 customTuple.integer = 1
-customTuple
+//customTuple
 
 //1.3 Set
 
@@ -210,3 +210,77 @@ var oneMoreClosure: myClosers = { myInteger, myString in
     print(myString)
 }
 
+
+
+
+
+//: ### Homework:
+//1. Write a Swift program to check if two given arrays of integers have 0 as their first element.
+//Напишите программу Swift, чтобы проверить, имеют ли два заданных массива целых чисел 0 в качестве первого элемента.
+
+var myArray1 = [0, 2, 4, 6, 8]
+var myArray2 = [0, 2, 4, 6, 8]
+
+print(myArray1[0] == 0 && myArray2[0] == 0)
+
+
+//2. Write a Swift program to test if an array of integers does not contain a 3 or a 5.
+//Напишите программу Swift, чтобы проверить, не содержит ли массив целых чисел 3 или 5.
+
+var myArray3 = [1, 2, 3, 4, 5]
+print(myArray3.contains(3) || myArray3.contains(5))
+
+//3. Write a Swift program to check whether the first element and the last element of a given array of integers are equal.
+//Напишите программу Swift, чтобы проверить, равны ли первый элемент и последний элемент данного массива целых чисел.
+
+var myArray4 = [4, 2, 5, 8, 4]
+print(myArray4.first == myArray4.last)
+
+//4. Write a Swift program that creates Array, adds an item, remove item, modify item and then prints size of the array.
+//Напишите программу Swift, которая создает массив, добавляет элемент, удаляет элемент, изменяет элемент и затем печатает размер массива.
+
+var myNewArray = [1, 2, 3]
+myNewArray.append(6)
+myNewArray.remove(at: 0)
+myNewArray[1] = 4
+myNewArray.count
+
+//5. Write a Swift program that creates Dictionary, adds an item, remove item, modify item and then prints size of the Dictionary.
+//Напишите программу Swift, которая создает словарь, добавляет элемент, удаляет элемент, изменяет элемент и затем печатает размер словаря.
+
+var myDictionary: Dictionary<String,Int> = ["one": 1, "two": 2, "three": 3]
+myDictionary["four"] = 4
+myDictionary
+myDictionary.removeValue(forKey: "four")
+myDictionary
+myDictionary.updateValue(5, forKey: "one")
+myDictionary
+myDictionary.count
+
+//6. Write a Swift program that creates Set, adds an item and then prints size of the Set.
+//Напишите программу Swift, которая создает набор, добавляет элемент, а затем печатает размер набора.
+
+var mySet: Set<Int> = [1, 2, 3, 5 ]
+mySet.remove(3)
+mySet
+mySet.insert(4)
+mySet
+mySet.count
+
+//7. Create 2 arrays, and merge them.
+//Создайте 2 массива и объедините их.
+
+var myArrayOne = ["H", "e", "l", "l", "o", " "]
+var myArrayTwo = ["W", "o", "r", "l", "d"]
+var sharedArray = myArrayOne + myArrayTwo
+print(sharedArray)
+
+//8. Write a closure to sum 2 integers, pass closure as argument to function, where return the result of calling that closure.
+//Напишите замыкание для суммирования 2 целых чисел, передайте замыкание в качестве аргумента функции, где возвращайте результат вызова этого замыкания.
+
+typealias myNewClosers = (Int, Int) -> Void
+var Closure: (Int, Int) -> Void = {
+    print($0)
+    print($1)
+}
+//  не разобралась с этим заданием, разберусь обязательно
