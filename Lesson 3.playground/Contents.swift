@@ -256,7 +256,7 @@ print(const1+const2+const3)
 //3. Составить алгоритм увеличения всех трех ранее созданных переменных на 5,если среди них есть хотя бы две равные. В противном случае выдать ответ «равных нет».
 
 if const1 == const2 || const1 == const3 || const2 == const3 {
-    print(const1 + 5, const2 + 5, const3 + 5)
+    print(const1 += 5, const2 += 5, const3 += 5)
 } else {
     print("Равных нет")
 }
