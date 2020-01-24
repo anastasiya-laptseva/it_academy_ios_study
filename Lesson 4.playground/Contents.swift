@@ -228,7 +228,7 @@ print(myArray1[0] == 0 && myArray2[0] == 0)
 //Напишите программу Swift, чтобы проверить, не содержит ли массив целых чисел 3 или 5.
 
 var myArray3 = [1, 2, 3, 4, 5]
-print(myArray3.contains(3) || myArray3.contains(5))
+print(!myArray3.contains(3) || !myArray3.contains(5))
 
 //3. Write a Swift program to check whether the first element and the last element of a given array of integers are equal.
 //Напишите программу Swift, чтобы проверить, равны ли первый элемент и последний элемент данного массива целых чисел.
@@ -284,3 +284,28 @@ var Closure: (Int, Int) -> Void = {
     print($1)
 }
 //  не разобралась с этим заданием, разберусь обязательно
+
+
+
+
+//var intC: (Int,Int) -> Int = { int1, int2 in
+//    return int1 + int2
+//}
+//func func1 (int1: Int, int2: Int, Closure: (Int, Int) -> Int)
+//var variable1 = Closure (int1, int2) + 10
+//    print(variable1)
+//
+//
+//func1(int1: 2, int2: 4, Closure: intC)
+//
+//
+//func func2 (int1: Int, int2: Int)
+//var variable2 = intC (int1, int2) + 10
+
+import UIKit
+var globalVariable = 10
+var color2 = UIColor.red
+var closure: (Int) -> Void = { [weak color] integer in
+    print(globalVariable, integer)
+//    color
+}
