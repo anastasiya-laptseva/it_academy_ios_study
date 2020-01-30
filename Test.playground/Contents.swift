@@ -10,17 +10,23 @@
 let x: Int = 1
 var y: Double = 2
 var sum: Int?
-sum! = x + y
+sum = x + Int(y)
 
 /*:
  2. Разверните опционал sum и выведите в консоль. Обратите внимание чтобы в выводе отсутствовало Optional()
  */
 
+if let unwrappedSum = sum {
+    print("sum: \(unwrappedSum)")
+}
+
+
+
 /*:
  3. Выведите в консоль четные числа от 2 до 2000
  */
 
-for i in 2...200 {
+for i in 2...2000 {
     if i%2 == 0 {
     print(i)
     }
@@ -32,11 +38,12 @@ for i in 2...200 {
  Задайте ей значение
  */
 
-var myColor: ColorTuple = ("green", "red", "blue", "transparent")
-
-var myColor;ColorTuple = 3
-
-
+typealias ColorTuple = (Float, Float, Float, Float)
+var myColor : ColorTuple
+myColor.0 = 1.0
+myColor.1 = 1.0
+myColor.2 = 1.0
+myColor.3 = 0.0
 
 /*:
  5. Объявите функцию, которая получет на вход 3 параметра типа Int и возвращает результат типа ColorTuple
