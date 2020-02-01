@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,51 +10,37 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="autorisation" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkJ-7v-cAN">
-                                <rect key="frame" x="87" y="389" width="240" height="128"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="9IH-V9-cGQ"/>
-                                    <constraint firstAttribute="height" constant="128" id="VTP-EL-22x"/>
-                                    <constraint firstAttribute="width" secondItem="OkJ-7v-cAN" secondAttribute="height" multiplier="15:8" id="bOS-Eg-fc3"/>
-                                    <constraint firstAttribute="width" secondItem="OkJ-7v-cAN" secondAttribute="height" multiplier="15:8" id="kSD-kB-8vn"/>
-                                    <constraint firstAttribute="width" secondItem="OkJ-7v-cAN" secondAttribute="height" multiplier="15:8" id="rem-2H-S4f"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ZW-4e-KzD">
-                                <rect key="frame" x="87" y="291" width="240" height="33"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="CKz-94-9eA"/>
-                                    <constraint firstAttribute="height" constant="33" id="lhX-IP-Qmu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f7y-yD-B9N" userLabel="UITextField">
+                                <rect key="frame" x="20" y="334.5" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="0.48191352739726029" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AT-Ff-tGb" userLabel="UILabel">
+                                <rect key="frame" x="20" y="40" width="374" height="284.5"/>
+                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="0.43910530821917809" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <mutableString key="text">You use view controllers to manage your UIKit app’s interface. A view controller manages a single root view, which may itself contain any number of subviews. User interactions with that view hierarchy are handled by your view controller, which coordinates with other objects of your app as needed. Every app has at least one view controller whose content fills the main window. If your app has more content than can fit onscreen at once, use multiple view controllers to manage different parts of that content.
+A container view controller embeds the content of other view controllers into its own root view. </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmB-2X-cpA">
-                                <rect key="frame" x="87" y="561" width="240" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="HmB-2X-cpA" secondAttribute="height" multiplier="15:8" id="rda-7X-CjN"/>
-                                </constraints>
-                                <state key="normal" title="My Custom Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="5ZW-4e-KzD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0zS-7Z-T6h"/>
-                            <constraint firstItem="HmB-2X-cpA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Jp-Zu-FW5"/>
-                            <constraint firstItem="OkJ-7v-cAN" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ISA-Qw-3yj"/>
-                            <constraint firstItem="HmB-2X-cpA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="P4z-3z-d5W"/>
-                            <constraint firstItem="5ZW-4e-KzD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0368304" id="fWc-vN-GRC"/>
-                            <constraint firstItem="5ZW-4e-KzD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="gcJ-5i-MyF"/>
-                            <constraint firstItem="OkJ-7v-cAN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tVD-cZ-IT3"/>
+                            <constraint firstItem="f7y-yD-B9N" firstAttribute="top" secondItem="6AT-Ff-tGb" secondAttribute="bottom" constant="10" id="18x-8S-eLi"/>
+                            <constraint firstItem="6AT-Ff-tGb" firstAttribute="trailing" secondItem="f7y-yD-B9N" secondAttribute="trailing" id="AiM-w9-P52"/>
+                            <constraint firstItem="6AT-Ff-tGb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="KzC-Q2-mMK"/>
+                            <constraint firstAttribute="trailing" secondItem="f7y-yD-B9N" secondAttribute="trailing" constant="20" id="OPx-5f-HC2"/>
+                            <constraint firstItem="f7y-yD-B9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Tm3-8j-OhX"/>
+                            <constraint firstItem="6AT-Ff-tGb" firstAttribute="leading" secondItem="f7y-yD-B9N" secondAttribute="leading" id="jBd-ED-X6H"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
